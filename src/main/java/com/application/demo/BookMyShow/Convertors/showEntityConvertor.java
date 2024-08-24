@@ -1,14 +1,14 @@
 package com.application.demo.BookMyShow.Convertors;
 
-import com.application.demo.BookMyShow.dtos.request.showEntityRequestdto;
+import com.application.demo.BookMyShow.dtos.request.RequestShowEntitydto;
 import com.application.demo.BookMyShow.entity.ShowEntity;
 
 public class showEntityConvertor {
 
-    public static ShowEntity convertShowEntityToShow(showEntityRequestdto showEntityRequestdto){
+    public static ShowEntity convertShowEntityToShow(RequestShowEntitydto RequestShowEntitydto){
         return ShowEntity.builder()
-                .showDateTimme(showEntityRequestdto.getShowDateTime())
-                .showType(showEntityRequestdto.getShowType())
+                .showDateTimme(RequestShowEntitydto.getShowDateTime())
+                .showType(RequestShowEntitydto.getShowType())
                 .build();
     }
 

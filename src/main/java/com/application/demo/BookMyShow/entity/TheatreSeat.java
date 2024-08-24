@@ -19,8 +19,9 @@ public class TheatreSeat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
-    @Enumerated(value = EnumType.STRING)
-    SeatType seatType;
+    @Enumerated(EnumType.STRING)
+    private SeatType seatType;
+    String seatNo;
 
     @ManyToOne
     @JoinColumn

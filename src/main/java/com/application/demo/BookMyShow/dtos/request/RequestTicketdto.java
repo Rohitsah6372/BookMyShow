@@ -14,7 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class ticketRequestdto {
+public class RequestTicketdto {
 
     int userId;
     int showId;

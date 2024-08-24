@@ -23,7 +23,11 @@ public class Movie {
     String movieName;
     int duration;
     double rating;
+
+    @Enumerated(EnumType.STRING)
     Language language;
+
+    @Enumerated(EnumType.STRING)
     Genre genre;
 
 

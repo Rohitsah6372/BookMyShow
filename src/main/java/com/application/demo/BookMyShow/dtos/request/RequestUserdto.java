@@ -1,6 +1,5 @@
 package com.application.demo.BookMyShow.dtos.request;
 
-import jakarta.persistence.Column;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,7 +10,7 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class userRequestdto {
+public class RequestUserdto {
 
     String name;
     int age;

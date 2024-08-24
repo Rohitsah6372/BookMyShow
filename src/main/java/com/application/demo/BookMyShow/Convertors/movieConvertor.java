@@ -1,17 +1,14 @@
 package com.application.demo.BookMyShow.Convertors;
-
-import com.application.demo.BookMyShow.dtos.request.movieRequestdto;
+import com.application.demo.BookMyShow.dtos.request.RequestMoviedto;
 import com.application.demo.BookMyShow.entity.Movie;
-
 public class movieConvertor {
-
-    public  static Movie convertMovieReqToMovie(movieRequestdto movieRequestdto){
+    public  static Movie convertMovieReqToMovie(RequestMoviedto RequestMoviedto){
         return Movie.builder()
-                .movieName(movieRequestdto.getMoviename())
-                .rating(movieRequestdto.getRating())
-                .language(movieRequestdto.getLanguage())
-                .genre(movieRequestdto.getGenre())
-                .duration(movieRequestdto.getDuration())
+                .movieName(RequestMoviedto.getMoviename())
+                .rating(RequestMoviedto.getRating())
+                .language(RequestMoviedto.getLanguage())
+                .genre(RequestMoviedto.getGenre())
+                .duration(RequestMoviedto.getDuration())
                 .build();
     }
 

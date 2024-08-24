@@ -1,17 +1,17 @@
 package com.application.demo.BookMyShow.Convertors;
 
-import com.application.demo.BookMyShow.dtos.request.userRequestdto;
+import com.application.demo.BookMyShow.dtos.request.RequestUserdto;
 import com.application.demo.BookMyShow.entity.User;
 
 public class userConvertor {
 
-    public static User convertRequestToUser(userRequestdto userRequestdto){
+    public static User convertRequestToUser(RequestUserdto RequestUserdto){
         User user = User.builder()
-                .name(userRequestdto.getName())
-                .age(userRequestdto.getAge())
-                .email(userRequestdto.getEmail())
-                .mobile(userRequestdto.getMobile())
-                .address(userRequestdto.getAddress())
+                .name(RequestUserdto.getName())
+                .age(RequestUserdto.getAge())
+                .email(RequestUserdto.getEmail())
+                .mobile(RequestUserdto.getMobile())
+                .address(RequestUserdto.getAddress())
                 .build();
 
         return  user;

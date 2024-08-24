@@ -15,7 +15,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class showEntityRequestdto {
+public class RequestShowEntitydto {
 
 
     Date showDateTime;
