@@ -36,6 +36,7 @@ public class theatreService {
         for(int count =1; count <= classicSeats;count++){
             TheatreSeat theatreSeat = TheatreSeat.builder()
                     .seatType(SeatType.CLASSIC)
+                    .theatre(theatre) // Set the theatre
                     .seatNo("C" + count)
                     .build();
             theatreSeatList.add(theatreSeat);
@@ -44,6 +45,7 @@ public class theatreService {
             TheatreSeat theatreSeat = TheatreSeat.builder()
                     .seatType(SeatType.PREMIUM)
                     .seatNo("P" + count)
+                    .theatre(theatre) // Set the theatre
                     .build();
             theatreSeatList.add(theatreSeat);
         }

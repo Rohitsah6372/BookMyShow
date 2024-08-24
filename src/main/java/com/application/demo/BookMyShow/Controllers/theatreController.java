@@ -1,6 +1,4 @@
 package com.application.demo.BookMyShow.Controllers;
-
-
 import com.application.demo.BookMyShow.dtos.request.RequestTheaterdto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

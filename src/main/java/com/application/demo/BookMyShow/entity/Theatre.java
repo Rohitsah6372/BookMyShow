@@ -24,9 +24,9 @@ public class Theatre {
     @Column(nullable = false)
     String location;
 
-    @OneToMany(mappedBy = "theatre", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+    @OneToMany(mappedBy = "theatre", cascade = CascadeType.ALL)
     List<TheatreSeat> theatreSeats = new ArrayList<>();
 
-    @OneToMany(mappedBy = "theatre", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+    @OneToMany(mappedBy = "theatre", cascade = CascadeType.ALL)
     List<ShowEntity> showEntities = new ArrayList<>();
 }

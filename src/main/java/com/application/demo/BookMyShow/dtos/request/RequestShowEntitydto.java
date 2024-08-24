@@ -23,6 +23,6 @@ public class RequestShowEntitydto {
     int movieId;
     int theatreId;
     double classicSeatPrice;
-    double premiunSeatPrice;
+    double premiumSeatPrice;
 
 }
