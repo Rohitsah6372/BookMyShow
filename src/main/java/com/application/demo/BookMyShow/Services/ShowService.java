@@ -1,11 +1,12 @@
 package com.application.demo.BookMyShow.Services;
-import com.application.demo.BookMyShow.Convertors.showEntityConvertor;
+import com.application.demo.BookMyShow.Convertors.ShowEntityConvertor;
 import com.application.demo.BookMyShow.DAOs.MovieRepo;
 import com.application.demo.BookMyShow.DAOs.ShowRepo;
 import com.application.demo.BookMyShow.DAOs.TheatreRepo;
 import com.application.demo.BookMyShow.dtos.request.RequestShowEntitydto;
 import com.application.demo.BookMyShow.entity.*;
 import com.application.demo.BookMyShow.enums.SeatType;
+import com.application.demo.BookMyShow.enums.ShowType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ import java.util.Date;
 import java.util.List;
 
 @Service
-public class showService {
+public class ShowService {
 
     @Autowired
     MovieRepo movieRepo;
@@ -25,7 +26,7 @@ public class showService {
     ShowRepo showRepo;
 
     public String addShow(RequestShowEntitydto requestShowEntitydto){
-        ShowEntity showEntity = showEntityConvertor.convertShowEntityToShow(requestShowEntitydto);
+        ShowEntity showEntity = ShowEntityConvertor.convertShowEntityToShow(requestShowEntitydto);
         int movieId = requestShowEntitydto.getMovieId();
         int theatreId = requestShowEntitydto.getTheatreId();
         Movie movie = movieRepo.findById(movieId).get();
@@ -68,5 +69,9 @@ public class showService {
         showRepo.deleteAll();
 
         return "Deleted Successfully";
+    }
+
+    public List<ShowEntity> findByShowType(ShowType showType) {
+        return showRepo.findByShowType(showType);
     }
 }

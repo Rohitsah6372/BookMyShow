@@ -1,5 +1,5 @@
 package com.application.demo.BookMyShow.Services;
-import com.application.demo.BookMyShow.Convertors.movieConvertor;
+import com.application.demo.BookMyShow.Convertors.MovieConvertor;
 import com.application.demo.BookMyShow.DAOs.MovieRepo;
 import com.application.demo.BookMyShow.dtos.request.RequestMoviedto;
 import com.application.demo.BookMyShow.entity.Movie;
@@ -8,11 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
-public class movieService {
+public class MovieService {
     @Autowired
     MovieRepo movieRepo;
     public String addMovie(RequestMoviedto requestMoviedto) {
-        Movie movie = movieConvertor.convertMovieReqToMovie(requestMoviedto);
+        Movie movie = MovieConvertor.convertMovieReqToMovie(requestMoviedto);
         movieRepo.save(movie);
         return "movie added Successfully";
     }

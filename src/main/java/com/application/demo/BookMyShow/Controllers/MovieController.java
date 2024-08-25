@@ -1,5 +1,5 @@
 package com.application.demo.BookMyShow.Controllers;
-import com.application.demo.BookMyShow.Services.movieService;
+import com.application.demo.BookMyShow.Services.MovieService;
 import com.application.demo.BookMyShow.dtos.request.RequestMoviedto;
 import com.application.demo.BookMyShow.entity.Movie;
 import com.application.demo.BookMyShow.enums.Language;
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 @RestController
 @RequestMapping("/movie")
-public class movieController {
+public class MovieController {
     @Autowired
-    movieService movieService;
+    MovieService movieService;
     @PostMapping("/add")
     public ResponseEntity<?> addmovie(@RequestBody RequestMoviedto requestMoviedto){
         try{

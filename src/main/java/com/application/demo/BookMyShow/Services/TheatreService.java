@@ -1,7 +1,7 @@
 package com.application.demo.BookMyShow.Services;
 
 
-import com.application.demo.BookMyShow.Convertors.theatreConvertor;
+import com.application.demo.BookMyShow.Convertors.TheatreConvertor;
 import com.application.demo.BookMyShow.DAOs.TheatreRepo;
 import com.application.demo.BookMyShow.dtos.request.RequestTheaterdto;
 import com.application.demo.BookMyShow.entity.Theatre;
@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class theatreService {
+public class TheatreService {
     @Autowired
     TheatreRepo theatreRepo;
 
@@ -22,7 +22,7 @@ public class theatreService {
         if(requestTheaterdto.getName() == null || requestTheaterdto.getLocation()==null){
             throw new Exception("Name ans location not found");
         }
-        Theatre theatre = theatreConvertor.convertTheatreReqdtoToTheatre(requestTheaterdto);
+        Theatre theatre = TheatreConvertor.convertTheatreReqdtoToTheatre(requestTheaterdto);
         List<TheatreSeat> theatreSeatList = createTheatreSeats(requestTheaterdto, theatre);
         theatre.setTheatreSeats(theatreSeatList);
         theatreRepo.save(theatre);
